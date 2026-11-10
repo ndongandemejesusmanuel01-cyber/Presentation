@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Configuración de caracteres y adaptabilidad para pantallas móviles -->
+    <!-- Codificación y adaptación a pantallas móviles -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Metadatos de SEO y título que se muestra en la pestaña del navegador -->
-    <meta name="description" content="Perfil profesional de Jesús Manuel Ndong Andeme">
+
+    <!-- Metadatos: descripción para buscadores, autor y título de la pestaña -->
+    <meta name="description" content="Perfil profesional de Jesús Manuel Ndong Andeme, estudiante de Desarrollo de Aplicaciones Web en Madrid.">
+    <meta name="author" content="Jesús Manuel Ndong Andeme">
     <title>Jesús Manuel Ndong Andeme | Perfil profesional</title>
-    
-    <!-- Enlace a la hoja de estilos externa -->
+
+    <!-- Hoja de estilos externa -->
     <link rel="stylesheet" href="estilos.css">
 </head>
 
-<body>
+<body id="inicio">
 
-    <!-- Encabezado principal del sitio web con la marca e identificador -->
+    <!-- ============ CABECERA ============ -->
     <header class="cabecera">
-        <a href="#" class="logo">JM<span>.</span></a>
+        <a href="#inicio" class="logo" aria-label="Ir al inicio">JM<span>.</span></a>
         <span class="etiqueta">PERFIL PROFESIONAL</span>
     </header>
 
-    <!-- Contenido principal de la página -->
+    <!-- ============ CONTENIDO PRINCIPAL ============ -->
     <main class="contenedor">
 
-        <!-- Tarjeta desplegable nativa en HTML5 usando details -->
+        <!-- Tarjeta desplegable nativa de HTML5 (details + summary), sin JavaScript -->
         <details class="tarjeta">
 
-            <!-- Cabecera visible del desplegable (vista previa de la tarjeta) -->
+            <!-- Parte siempre visible: presentación -->
             <summary class="presentacion">
-                <!-- Monograma con las iniciales del nombre -->
-                <div class="monograma">JM</div>
+                <div class="monograma" aria-hidden="true">JM</div>
 
-                <!-- Datos de identificación personal y título profesional -->
                 <div class="identidad">
                     <p class="sobrelinea">PRESENTACIÓN PROFESIONAL</p>
                     <h1>Jesús Manuel<br>Ndong Andeme</h1>
-                    <p class="puesto">
-                        Estudiante de Desarrollo de Aplicaciones Web
-                    </p>
+                    <p class="puesto">Estudiante de Desarrollo de Aplicaciones Web</p>
 
-                    <!-- Indicador visual que cambia el texto según si está abierto o cerrado mediante CSS -->
+                    <!-- El CSS muestra uno u otro texto según el desplegable esté abierto o cerrado -->
                     <span class="indicador">
                         <span class="texto-abrir">Ver perfil completo ↓</span>
                         <span class="texto-cerrar">Cerrar perfil ↑</span>
@@ -48,100 +45,127 @@
                 </div>
             </summary>
 
-            <!-- Contenido extendido que se muestra al abrir el desplegable -->
+            <!-- Parte que aparece al abrir la tarjeta -->
             <div class="contenido">
 
-                <!-- Sección 01: Extracto personal y resumen sobre mí -->
-                <section class="seccion">
+                <!-- 01 · Sobre mí -->
+                <section class="seccion" aria-labelledby="titulo-perfil">
                     <p class="numero">01 / PERFIL</p>
-                    <h2>Sobre mí</h2>
+                    <h2 id="titulo-perfil">Sobre mí</h2>
                     <p>
-                        Apasionado por la programación y la creación
-                        de páginas web limpias, funcionales y accesibles.
-                        Mi objetivo es seguir desarrollando mis
-                        competencias técnicas y participar en proyectos
-                        tecnológicos.
+                        Apasionado por la programación y la creación de páginas web limpias,
+                        funcionales y accesibles. Mi objetivo es seguir desarrollando mis
+                        competencias técnicas y participar en proyectos tecnológicos.
                     </p>
                 </section>
 
-                <!-- Sección 02: Listado de tecnologías y lenguajes dominados -->
-                <section class="seccion">
+                <!-- 02 · Habilidades, agrupadas por áreas -->
+                <section class="seccion" aria-labelledby="titulo-habilidades">
                     <p class="numero">02 / COMPETENCIAS</p>
-                    <h2>Habilidades técnicas</h2>
+                    <h2 id="titulo-habilidades">Habilidades técnicas</h2>
 
+                    <h3>Front-end</h3>
                     <div class="habilidades">
                         <span>HTML</span>
                         <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <h3>Back-end</h3>
+                    <div class="habilidades">
                         <span>Java</span>
                         <span>PHP</span>
+                    </div>
+
+                    <h3>Datos y herramientas</h3>
+                    <div class="habilidades">
                         <span>SQL</span>
+                        <span>MySQL</span>
+                        <span>Git</span>
+                        <span>GitHub</span>
                     </div>
                 </section>
 
-                <!-- Sección 03: Historial y trayectoria de estudios -->
-                <section class="seccion">
+                <!-- 03 · Formación -->
+                <section class="seccion" aria-labelledby="titulo-formacion">
                     <p class="numero">03 / FORMACIÓN</p>
-                    <h2>Formación académica</h2>
+                    <h2 id="titulo-formacion">Formación académica</h2>
 
                     <div class="formacion">
-                        <span class="punto"></span>
+                        <span class="punto" aria-hidden="true"></span>
                         <div>
                             <h3>Desarrollo de Aplicaciones Web</h3>
-                            <p>
-                                Formación en programación, desarrollo
-                                web y gestión de bases de datos.
-                            </p>
-                            <!-- Recordatorio o nota pendiente de completar -->
-                            <p class="nota">
-                                Añade el centro educativo y las fechas.
-                            </p>
+                            <p>Formación en programación, desarrollo web y gestión de bases de datos.</p>
+                            <!-- PENDIENTE: sustituye esta nota por el centro y las fechas reales -->
+                            <p class="nota">Añade el centro educativo y las fechas.</p>
                         </div>
                     </div>
                 </section>
 
-                <!-- Sección 04: Metas profesionales e intereses del sector -->
-                <section class="seccion">
+                <!-- 04 · Objetivo -->
+                <section class="seccion" aria-labelledby="titulo-objetivo">
                     <p class="numero">04 / OBJETIVO</p>
-                    <h2>Objetivo profesional</h2>
+                    <h2 id="titulo-objetivo">Objetivo profesional</h2>
                     <p>
-                        Ampliar mis conocimientos, adquirir experiencia
-                        práctica y crecer profesionalmente en el sector
-                        del desarrollo de aplicaciones web.
+                        Ampliar mis conocimientos, adquirir experiencia práctica y crecer
+                        profesionalmente en el sector del desarrollo de aplicaciones web.
                     </p>
                 </section>
 
-                <!-- Sección de contacto y enlace a la red profesional LinkedIn -->
-                <section class="linkedin">
-                    <div class="linkedin-logo">in</div>
+                <!-- ============ REDES PROFESIONALES ============
+                     Cada red es un bloque con la misma estructura (logo, texto y botón).
+                     El de GitHub reutiliza las clases del de LinkedIn y añade "github". -->
+                <div class="redes">
 
-                    <div class="linkedin-info">
-                        <p class="numero">CONECTA CONMIGO</p>
-                        <h2>Mi perfil de LinkedIn</h2>
-                        <p>
-                            Consulta mi perfil profesional y conoce
-                            más sobre mi trayectoria.
-                        </p>
-                    </div>
+                    <!-- LinkedIn -->
+                    <section class="linkedin" aria-labelledby="titulo-linkedin">
+                        <div class="linkedin-logo" aria-hidden="true">in</div>
+                        <div class="linkedin-info">
+                            <p class="numero">CONECTA CONMIGO</p>
+                            <h2 id="titulo-linkedin">Mi perfil de LinkedIn</h2>
+                            <p>Consulta mi perfil profesional y conoce más sobre mi trayectoria.</p>
+                        </div>
+                        <!-- CAMBIA TU-USUARIO-LINKEDIN por tu usuario real -->
+                        <a class="boton"
+                           href="https://www.linkedin.com/in/TU-USUARIO-LINKEDIN/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Visitar LinkedIn ↗
+                        </a>
+                    </section>
 
-                    <!-- Enlace seguro que abre el perfil externo en una nueva pestaña -->
-                    <a
-                        class="boton"
-                        href="https://www.linkedin.com/mynetwork/grow/"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        Visitar LinkedIn ↗
-                    </a>
-                </section>
+                    <!-- GitHub (nuevo) -->
+                    <section class="linkedin github" aria-labelledby="titulo-github">
+                        <div class="linkedin-logo" aria-hidden="true">GH</div>
+                        <div class="linkedin-info">
+                            <p class="numero">MIS PROYECTOS</p>
+                            <h2 id="titulo-github">Mi perfil de GitHub</h2>
+                            <p>Mira mi código, mis prácticas y los proyectos en los que estoy trabajando.</p>
+                        </div>
+                        <a class="boton"
+                           href="https://github.com/ndongandemejesusmanuel01-cyber"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Visitar GitHub ↗
+                        </a>
+                    </section>
 
+                </div>
             </div>
         </details>
 
     </main>
 
-    <!-- Pie de página con créditos e información -->
+    <!-- ============ PIE DE PÁGINA ============ -->
     <footer class="pie">
         <p>Jesús Manuel Ndong Andeme</p>
         <p>Perfil profesional · España</p>
+        <!-- Enlaces rápidos también en el pie (segundo enlace a GitHub) -->
+        <p>
+            <a href="https://github.com/ndongandemejesusmanuel01-cyber" target="_blank" rel="noopener noreferrer">GitHub</a>
+            ·
+            <a href="https://www.linkedin.com/in/TU-USUARIO-LINKEDIN/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
     </footer>
 
 </body>

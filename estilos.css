@@ -167,6 +167,13 @@ h1 {
     font-size: 14px;
 }
 
+/* NUEVO: títulos de cada grupo de habilidades (Front-end, Back-end...) */
+.seccion > h3 {
+    color: var(--azul);
+    font-size: 14px;
+    margin: 18px 0 10px;
+}
+
 .habilidades {
     display: flex;
     flex-wrap: wrap;
@@ -220,6 +227,14 @@ h1 {
     font-style: italic;
 }
 
+/* REDES PROFESIONALES (LinkedIn y GitHub) */
+/* NUEVO: contenedor que separa los dos bloques */
+.redes {
+    display: grid;
+    gap: 16px;
+    margin-top: 30px;
+}
+
 .linkedin {
     display: flex;
     align-items: center;
@@ -230,6 +245,11 @@ h1 {
     background: #f0f5fa;
     border: 1px solid var(--borde);
     border-radius: 14px;
+}
+
+/* NUEVO: dentro de .redes el espacio lo da el gap, no el margen */
+.redes .linkedin {
+    margin-top: 0;
 }
 
 .linkedin-logo {
@@ -278,6 +298,24 @@ h1 {
     transform: translateY(-2px);
 }
 
+/* NUEVO: variante GitHub (mismo bloque que LinkedIn, en gris oscuro) */
+.github {
+    background: #f4f4f5;
+}
+
+.github .linkedin-logo {
+    background: #24292f;
+    font-size: 21px;
+}
+
+.github .boton {
+    background: #24292f;
+}
+
+.github .boton:hover {
+    background: #000000;
+}
+
 a:focus-visible,
 summary:focus-visible {
     outline: 3px solid var(--verde);
@@ -295,6 +333,22 @@ summary:focus-visible {
     gap: 15px;
     color: var(--gris);
     font-size: 12px;
+}
+
+/* NUEVO: enlaces del pie (GitHub y LinkedIn) */
+.pie p {
+    margin: 0;
+}
+
+.pie a {
+    color: var(--azul);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.pie a:hover {
+    color: var(--verde);
+    text-decoration: underline;
 }
 
 @keyframes aparecer {
@@ -353,7 +407,7 @@ summary:focus-visible {
 
     .pie {
         flex-direction: column;
-        gap: 0;
+        gap: 4px;
         padding: 18px 20px;
     }
 }
